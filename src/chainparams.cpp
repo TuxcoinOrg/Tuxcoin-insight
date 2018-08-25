@@ -183,17 +183,17 @@ public:
         consensus.nMinerConfirmationWindow = 2016; // nPowTargetTimespan / nPowTargetSpacing
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1529196619; // December 31, 2008
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1483228800; // January 1, 2017
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1517356801; // January 31st, 2018
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1530204632; // January 1, 2017
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1561740632; // January 31st, 2018
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1483228800; // January 1, 2017
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1517356801; // January 31st, 2018
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1530204632; // January 1, 2017
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1561740632; // January 31st, 2018
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
@@ -201,17 +201,17 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x279f0fda784164aebbface8db434a8801748be987edb585d8025e58379d1b54f"); //153490
 
-        pchMessageStart[0] = 0xfa;
-        pchMessageStart[1] = 0xbf;
-        pchMessageStart[2] = 0xb5;
-        pchMessageStart[3] = 0xda;
+        pchMessageStart[0] = 0xf3;
+        pchMessageStart[1] = 0xc2;
+        pchMessageStart[2] = 0xb1;
+        pchMessageStart[3] = 0xdf;
         nDefaultPort = 42075;
         nPruneAfterHeight = 1000;
 
         // ToDo: first argument is epoch time. change to time of release for genesis block on alpha release.
         // second argument is nNonce, will be generated later. 0 for now. Reminder to change both these
         //Currently broken. New genesis block must be generated
-        genesis = CreateGenesisBlock(1515002093, 388550749, 0x1e0ffff0, 1, 69 * COIN);
+        genesis = CreateGenesisBlock(1529196619, 388550749, 0x1e0ffff0, 1, 69 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x279f0fda784164aebbface8db434a8801748be987edb585d8025e58379d1b54f"));
         assert(genesis.hashMerkleRoot == uint256S("0x3ead103523ad8f9bfc8365c7b5ddb6f10c731c6274730e88bcaa2c74606dd4bb"));
