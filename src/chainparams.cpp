@@ -211,10 +211,10 @@ public:
         // ToDo: first argument is epoch time. change to time of release for genesis block on alpha release.
         // second argument is nNonce, will be generated later. 0 for now. Reminder to change both these
         //Currently broken. New genesis block must be generated
-        genesis = CreateGenesisBlock(1516729643, 1047651, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1515002093, 388550749, 0x1e0ffff0, 1, 69 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0xb25004ec2dc27689999f9ee14856ee0464d7f73f3fae3cf43c1d40f89c141aea"));
-        assert(genesis.hashMerkleRoot == uint256S("0x5f32b33db6dcab182dfad55b3d04b2978c1598cf82519835e000dd77e37f3aa8"));
+        assert(consensus.hashGenesisBlock == uint256S("0x279f0fda784164aebbface8db434a8801748be987edb585d8025e58379d1b54f"));
+        assert(genesis.hashMerkleRoot == uint256S("0x3ead103523ad8f9bfc8365c7b5ddb6f10c731c6274730e88bcaa2c74606dd4bb"));
 
 
 
