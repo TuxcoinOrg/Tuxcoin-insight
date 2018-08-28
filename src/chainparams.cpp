@@ -75,7 +75,7 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 420690;
-        consensus.BIP16Height = 13000;
+        //consensus.BIP16Height = 13000;
         consensus.BIP34Height = 13000;
         consensus.BIP34Hash = uint256S("9a34adbc9208cd4f95d53b17e0dd50d2d7d4125f8dbd0abbb53e6061105ffec3");
         consensus.BIP65Height = 13000; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
